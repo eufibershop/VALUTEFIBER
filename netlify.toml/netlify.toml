@@ -1,0 +1,19 @@
+# Netlify config
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[edge_functions]]
+  path = "/*"
+  function = "proxy"
+
+[[redirects]]
+  from = "http://*/*"
+  to = "https://:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Powered-By = ""
