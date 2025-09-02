@@ -1,4 +1,5 @@
-const UPSTREAM = "https://vaultfiber-xrp.printify.me";
+const UPSTREAM = "https://netlify/edge-functions/proxy.ts
+
 
 function forwardHeaders(reqHeaders) {
   const h = new Headers(reqHeaders);
